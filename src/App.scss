@@ -1,0 +1,212 @@
+// Color Variables
+$primary: #2e7d32;
+$primary-hover: #1b5e20;
+$secondary: #1a1a1a;
+$tertiary: #66bb6a;
+$neutral: #f5f5f7;
+$white: #ffffff;
+$text-muted: #666666;
+$border-color: #e0e0e0;
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-card {
+  background: $white;
+  border-radius: 16px;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+
+    .logo-icon {
+      font-size: 32px;
+      color: $primary;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: $secondary;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .subtitle {
+    font-size: 15px;
+    color: $text-muted;
+    font-weight: 400;
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-group {
+  width: 100%;
+
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: $neutral;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    padding: 14px 16px;
+    transition: all 0.2s ease;
+
+    &:focus-within {
+      border-color: $primary;
+      background: $white;
+      box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+    }
+
+    .input-icon {
+      font-size: 18px;
+      color: $text-muted;
+      flex-shrink: 0;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      font-size: 15px;
+      color: $secondary;
+      outline: none;
+      font-family: inherit;
+
+      &::placeholder {
+        color: $text-muted;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background: $primary;
+  color: $white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  margin-top: 8px;
+
+  &:hover {
+    background: $primary-hover;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: $border-color;
+  }
+
+  span {
+    padding: 0 16px;
+    font-size: 13px;
+    color: $text-muted;
+    font-weight: 500;
+  }
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: $secondary;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+
+  &:hover {
+    background: $neutral;
+    border-color: $text-muted;
+  }
+
+  .google-icon {
+    font-size: 18px;
+    color: #4285F4;
+  }
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: $text-muted;
+
+  .link {
+    color: $primary;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+
+  .login-header {
+    .logo {
+      .logo-icon {
+        font-size: 28px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+}
