@@ -1,0 +1,107 @@
+
+<h2 class="sr-only">Three website service packages: Starter at $90/month, Business at $180/month, and Growth at $380/month, with one-time add-ons</h2>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; padding: 1rem 0; }
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; display: flex; flex-direction: column; gap: 16px; }
+.card.featured { border: 2px solid var(--color-border-info); }
+.badge { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: var(--border-radius-md); background: var(--color-background-info); color: var(--color-text-info); margin-bottom: 4px; }
+.plan-name { font-size: 18px; font-weight: 500; color: var(--color-text-primary); }
+.plan-price { font-size: 28px; font-weight: 500; color: var(--color-text-primary); }
+.plan-price span { font-size: 13px; font-weight: 400; color: var(--color-text-secondary); }
+.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); }
+.features { display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.feature { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--color-text-secondary); line-height: 1.4; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-border-secondary); flex-shrink: 0; margin-top: 5px; }
+.dot.active { background: #1D9E75; }
+.setup { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; font-size: 12px; color: var(--color-text-secondary); }
+.setup strong { color: var(--color-text-primary); font-weight: 500; }
+.cta { width: 100%; padding: 10px; font-size: 13px; border-radius: var(--border-radius-md); cursor: pointer; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-primary); }
+.cta:hover { background: var(--color-background-secondary); }
+.cta.primary { background: var(--color-text-primary); color: var(--color-background-primary); border-color: transparent; }
+.cta.primary:hover { opacity: 0.88; }
+.addons { padding: 1.5rem 0 0; }
+.addons-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 12px; }
+.addon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+.addon { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px; }
+.addon-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
+.addon-price { font-size: 12px; color: var(--color-text-secondary); }
+</style>
+
+<div class="grid">
+  <div class="card">
+    <div>
+      <div class="plan-name">Starter</div>
+      <div class="plan-price">$90 <span>/ month</span></div>
+    </div>
+    <hr class="divider">
+    <div class="features">
+      <div class="feature"><div class="dot active"></div>VPS hosting</div>
+      <div class="feature"><div class="dot active"></div>SSL certificate</div>
+      <div class="feature"><div class="dot active"></div>CDN delivery</div>
+      <div class="feature"><div class="dot active"></div>Contact form to mailbox</div>
+      <div class="feature"><div class="dot active"></div>10 maintenance requests / month</div>
+      <div class="feature"><div class="dot"></div>Business mail</div>
+      <div class="feature"><div class="dot"></div>Priority support</div>
+      <div class="feature"><div class="dot"></div>Email automation</div>
+      <div class="feature"><div class="dot"></div>n8n workflows</div>
+    </div>
+    <div class="setup"><strong>Setup fee:</strong> $300 – $500</div>
+    <button class="cta" onclick="sendPrompt('Tell me more about the Starter plan')">Learn more ↗</button>
+  </div>
+
+  <div class="card featured">
+    <div>
+      <div class="badge">Most popular</div>
+      <div class="plan-name">Business</div>
+      <div class="plan-price">$180 <span>/ month</span></div>
+    </div>
+    <hr class="divider">
+    <div class="features">
+      <div class="feature"><div class="dot active"></div>Everything in Starter</div>
+      <div class="feature"><div class="dot active"></div>Business mail (1 user)</div>
+      <div class="feature"><div class="dot active"></div>Priority support (24hr)</div>
+      <div class="feature"><div class="dot active"></div>20 maintenance requests / month</div>
+      <div class="feature"><div class="dot"></div>Email automation</div>
+      <div class="feature"><div class="dot"></div>n8n workflows</div>
+    </div>
+    <div class="setup"><strong>Setup fee:</strong> $500 – $700</div>
+    <button class="cta primary" onclick="sendPrompt('Tell me more about the Business plan')">Learn more ↗</button>
+  </div>
+
+  <div class="card">
+    <div>
+      <div class="plan-name">Growth</div>
+      <div class="plan-price">$380 <span>/ month</span></div>
+    </div>
+    <hr class="divider">
+    <div class="features">
+      <div class="feature"><div class="dot active"></div>Everything in Business</div>
+      <div class="feature"><div class="dot active"></div>30 maintenance requests / month</div>
+      <div class="feature"><div class="dot active"></div>Resend email automation</div>
+      <div class="feature"><div class="dot active"></div>n8n automation workflows</div>
+      <div class="feature"><div class="dot active"></div>Client brings own API keys</div>
+    </div>
+    <div class="setup"><strong>Setup fee:</strong> $700 – $1,000</div>
+    <button class="cta" onclick="sendPrompt('Tell me more about the Growth plan')">Learn more ↗</button>
+  </div>
+</div>
+
+<div class="addons">
+  <div class="addons-title">One-time add-ons</div>
+  <div class="addon-grid">
+    <div class="addon">
+      <div class="addon-name">Sanity CMS setup</div>
+      <div class="addon-price">$500 – $800 one-time</div>
+    </div>
+    <div class="addon">
+      <div class="addon-name">Extra maintenance requests</div>
+      <div class="addon-price">$5 – $10 per request</div>
+    </div>
+    <div class="addon">
+      <div class="addon-name">Additional n8n workflow</div>
+      <div class="addon-price">$150 – $300 one-time</div>
+    </div>
+  </div>
+</div>
